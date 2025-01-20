@@ -1,4 +1,3 @@
-import React from "react";
 import { CircleAlert, House, Shield, Users, Phone } from "lucide-react";
 import CustomButton from "../ui/buttons/CustomButtom";
 

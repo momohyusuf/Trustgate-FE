@@ -1,4 +1,3 @@
-import React from "react";
 import CustomButton from "../buttons/CustomButtom";
 
 import { HelpCircle, User } from "lucide-react";
