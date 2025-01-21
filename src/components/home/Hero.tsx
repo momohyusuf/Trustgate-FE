@@ -1,5 +1,6 @@
 import { CircleAlert, House, Shield, Users, Phone } from "lucide-react";
 import CustomButton from "../ui/buttons/CustomButtom";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -41,11 +42,13 @@ const Hero = () => {
             variant="primary"
             onClick={() => console.log("Get started")}
           />
-          <CustomButton
-            text="About Us"
-            variant="secondary"
-            onClick={() => console.log("Get started")}
-          />
+          <Link to="/about-us">
+            <CustomButton
+              text="About Us"
+              variant="secondary"
+              onClick={() => console.log("Get started")}
+            />
+          </Link>
         </div>
       </div>
       <div>

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import CustomButton from "../buttons/CustomButtom";
+import { Tooltip } from "antd";
 
 import { HelpCircle, User } from "lucide-react";
 
@@ -15,9 +16,13 @@ const Navbar = () => {
           <div className="bg-secondary-100 p-3 rounded-md cursor-pointer">
             <HelpCircle size={20} strokeWidth={2.25} />
           </div>
-          <div className="bg-secondary-100 p-3 rounded-md cursor-pointer">
-            <User size={20} strokeWidth={2.25} />
-          </div>
+
+          <Tooltip color="#787AD6" title="Login">
+            <div className="bg-secondary-100 p-3 rounded-md cursor-pointer">
+              <User size={20} strokeWidth={2.25} />
+            </div>
+          </Tooltip>
+
           <div className="hidden md:flex">
             <CustomButton
               text="Contact Us"
