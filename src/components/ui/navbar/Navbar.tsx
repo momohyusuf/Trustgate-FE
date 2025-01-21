@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import CustomButton from "../buttons/CustomButtom";
 
 import { HelpCircle, User } from "lucide-react";
@@ -6,7 +7,9 @@ const Navbar = () => {
   return (
     <header className="bg-primary-100 ">
       <nav className="flex justify-between items-center p-4 container mx-auto">
-        <img src="/logo.png" alt="Trust Gate logo" />
+        <NavLink to={"/"}>
+          <img src="/logo.png" alt="Trust Gate logo" />
+        </NavLink>
 
         <div className="flex items-center gap-4">
           <div className="bg-secondary-100 p-3 rounded-md cursor-pointer">

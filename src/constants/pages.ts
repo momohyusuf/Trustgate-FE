@@ -1,7 +1,7 @@
-import AboutUs from "../pages/AboutUs";
+import AboutUs from "../pages/organization/AboutUs";
 import Home from "../pages/Home";
-import PrivacyPolicy from "../pages/PrivacyPolicy";
-import TermsOfUse from "../pages/TermsOfUse";
+import PrivacyPolicy from "../pages/organization/PrivacyPolicy";
+import TermsOfUse from "../pages/organization/TermsOfUse";
 
 interface Page {
   general: {

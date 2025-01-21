@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const Footer = () => {
   return (
     <footer className="bg-secondary-100 py-16 px-4">
@@ -15,8 +17,16 @@ const Footer = () => {
             <div>
               <h3 className="mb-4 text-primary-400 font-medium">Links</h3>
               <ul className="text-grey-600 grid gap-4">
-                <li>Home</li>
-                <li>About</li>
+                {/* <li>Home</li>
+                <li>About</li> */}
+
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+
+                <li>
+                  <Link to="/about-us">About</Link>
+                </li>
               </ul>
             </div>
 
@@ -30,9 +40,9 @@ const Footer = () => {
               </p>
               <div>
                 <div className="flex gap-4">
-                  <img src="/public/images/social-icons/instagram.svg" alt="" />
-                  <img src="/public/images/social-icons/telegram.svg" alt="" />
-                  <img src="/public/images/social-icons/tiktok.svg" alt="" />
+                  <img src="/images/social-icons/instagram.svg" alt="" />
+                  <img src="/images/social-icons/telegram.svg" alt="" />
+                  <img src="/images/social-icons/tiktok.svg" alt="" />
                 </div>
               </div>
             </div>
