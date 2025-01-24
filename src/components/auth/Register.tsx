@@ -156,7 +156,7 @@ const Register = () => {
   }
   return (
     <AuthFormWrapper>
-      <div className="grid gap-4 h-[calc(100vh-80px)] px-4 py-8 lg:py-16 justify-center ">
+      <div className="grid gap-4 h-[calc(100vh-80px)]  py-8 lg:py-16 justify-center ">
         <div className="flex flex-col gap-8 p-4 max-w-[500px]">
           <h1 className="text-2xl lg:text-4xl text-grey-600 text-center font-bold font-lora">
             Registration
