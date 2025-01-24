@@ -18,9 +18,11 @@ const Navbar = () => {
           </div>
 
           <Tooltip color="#787AD6" title="Login">
-            <div className="bg-secondary-100 p-3 rounded-md cursor-pointer">
-              <User size={20} strokeWidth={2.25} />
-            </div>
+            <NavLink to={"/login"}>
+              <div className="bg-secondary-100 p-3 rounded-md cursor-pointer">
+                <User size={20} strokeWidth={2.25} />
+              </div>
+            </NavLink>
           </Tooltip>
 
           <div className="hidden md:flex">

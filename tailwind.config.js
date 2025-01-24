@@ -7,6 +7,7 @@ export default {
         primary: {
           100: "#F0F0FAB2",
           200: "#A2A3E4",
+
           400: "#787AD6",
         },
 
@@ -25,8 +26,9 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
+        lora: ["Lora", "serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };

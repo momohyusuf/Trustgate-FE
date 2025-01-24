@@ -37,11 +37,13 @@ const Hero = () => {
           using disposable one-time numbers for ultimate privacy and security!
         </p>
         <div className="flex gap-6 ">
-          <CustomButton
-            text="Get started"
-            variant="primary"
-            onClick={() => console.log("Get started")}
-          />
+          <Link to="/register">
+            <CustomButton
+              text="Get started"
+              variant="primary"
+              onClick={() => console.log("Get started")}
+            />
+          </Link>
           <Link to="/about-us">
             <CustomButton
               text="About Us"

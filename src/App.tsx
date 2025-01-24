@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
-import { publicPages } from "./constants/pages";
+import { publicPages, privatePages } from "./constants/pages";
+
 import MainLayout from "./layout/MainLayout";
 
 const App = () => {
@@ -7,7 +8,18 @@ const App = () => {
     <Routes>
       <Route element={<MainLayout />}>
         {publicPages.general.map((page) => (
-          <Route path={page.path} element={<page.component />} />
+          <Route
+            key={page.path}
+            path={page.path}
+            element={<page.component />}
+          />
+        ))}
+        {privatePages.general.map((page) => (
+          <Route
+            key={page.path}
+            path={page.path}
+            element={<page.component />}
+          />
         ))}
       </Route>
     </Routes>
