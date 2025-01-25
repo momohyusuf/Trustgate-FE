@@ -8,6 +8,8 @@ import TermsOfUse from "../pages/organization/TermsOfUse";
 // Auth pages
 import UserRegistration from "../pages/auth/Register";
 import UserLogin from "../pages/auth/Login";
+import UserResetPassword from "../pages/auth/ResetPassword";
+import UserForgotPassword from "../pages/auth/ForgotPassword";
 
 interface Page {
   general: {
@@ -38,16 +40,25 @@ export const publicPages: Page = {
   ],
 };
 
-export const privatePages: Page = {
+export const authPages: Page = {
   general: [
     {
-      path: "/register",
+      path: "/auth/register",
       component: UserRegistration,
     },
 
     {
-      path: "/login",
+      path: "/auth/login",
       component: UserLogin,
+    },
+    {
+      path: "/auth/forgot-password",
+      component: UserForgotPassword,
+    },
+
+    {
+      path: "/auth/reset-password",
+      component: UserResetPassword,
     },
   ],
 };

@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router";
-import { publicPages, privatePages } from "./constants/pages";
+import { publicPages, authPages } from "./constants/pages";
 
 import MainLayout from "./layout/MainLayout";
 
@@ -14,7 +14,7 @@ const App = () => {
             element={<page.component />}
           />
         ))}
-        {privatePages.general.map((page) => (
+        {authPages.general.map((page) => (
           <Route
             key={page.path}
             path={page.path}

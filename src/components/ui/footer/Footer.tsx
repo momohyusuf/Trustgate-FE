@@ -6,7 +6,7 @@ const Footer = () => {
       <section className="max-w-[1000px] justify-between mx-auto ">
         <section className="flex flex-col gap-8 lg:flex-row ">
           <div className="lg:w-1/2 lg:px-8">
-            <img className="mb-4" src="/logo.png" alt="Trust gate logo" />
+            <img className="mb-4" src="/logo.svg" alt="Trust gate logo" />
             <p className="text-grey-600 font-inter">
               TrustGate Enterprise: Your trusted partner for seamless and secure
               online verification services. Experience reliability tailored for
