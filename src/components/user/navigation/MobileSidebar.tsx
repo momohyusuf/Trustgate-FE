@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { userRoutes } from "../../../constants/data.tsx";
 import { Settings, LogOut } from "lucide-react";
 import React from "react";
@@ -12,50 +12,54 @@ const MobileSidebar = ({
   const location = useLocation();
   const currentPath =
     location.pathname.split("/")[location.pathname.split("/").length - 1];
+  const navigate = useNavigate();
 
   return (
     <aside
-      className={`flex flex-col  h-full p-16 bg-primary-100 relative transition-all duration-300`}
+      className={`flex flex-col  h-screen p-16 bg-primary-100 relative transition-all duration-300`}
     >
       <img
-        className="absolute hidden lg:block top-0  left-[0rem] z-10"
-        src="/ellipse.svg"
-        alt="Trust Gate logo"
-      />
-
-      <img
-        className="absolute -bottom-[3rem] hidden lg:block left-[0rem]  z-10 rotate-90"
+        className="absolute bottom-[5rem]  -left-[10rem]  z-10 rotate-90"
         src="/ellipse-rounded.svg"
         alt="Trust Gate logo"
       />
-      <div className="mb-[5rem] flex justify-between items-center">
+      <div className="mb-[2rem] flex justify-between items-center">
         <img className="w-32" src="/logo.svg" alt="Trustgate" />
         <button type="button" onClick={() => setShowSidebar(false)}>
           <img src="/close-icon.png" alt="close trustgate side bar" />
         </button>
       </div>
-      <nav className="flex flex-col mb-auto">
+      <nav className="flex flex-col mb-auto relative z-20">
         {userRoutes.map((route) => (
-          <Link
-            className={`border-b  hover:bg-tertiary-100 p-4 rounded-md transition-all duration-300  ${
+          <p
+            className={`flex items-center gap-4 border-b  hover:bg-tertiary-100 p-4 rounded-md transition-all duration-300  ${
               currentPath === route.to ? "bg-tertiary-100" : ""
             }`}
             key={route.id}
-            to={`${route.to === "dashboard" ? "" : "/dashboard/" + route.to}`}
+            onClick={() => {
+              setShowSidebar(false);
+              navigate(
+                `${route.to === "dashboard" ? "" : "/dashboard/" + route.to}`
+              );
+            }}
           >
-            <p className="flex items-center gap-4">
-              {route.icon}
-              <span className="whitespace-nowrap"> {route.title}</span>
-            </p>
-          </Link>
+            {route.icon}
+            <span className="whitespace-nowrap"> {route.title}</span>
+          </p>
         ))}
       </nav>
 
       <div className="flex justify-between p-4">
-        <Link className="flex gap-4" to="/user/account-settings">
+        <p
+          onClick={() => {
+            setShowSidebar(false);
+            navigate("/dashboard/account-settings");
+          }}
+          className="flex gap-4"
+        >
           <Settings strokeWidth={2.5} />
           <span>Account Settings</span>
-        </Link>
+        </p>
 
         <button className="text-primary-400" type="button" title="Log out">
           <LogOut />

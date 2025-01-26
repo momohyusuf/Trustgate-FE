@@ -24,7 +24,9 @@ const UserNavbar = ({
           {" "}
           <AlignJustify size={32} strokeWidth={0.75} />
         </button>
-        <h3 className="text-5xl">O</h3>
+        <h3 className="text-4xl h-12 w-12 font-bold bg-primary-400 text-white rounded-full flex items-center justify-center">
+          O
+        </h3>
       </div>
     </nav>
   );
