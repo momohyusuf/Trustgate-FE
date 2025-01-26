@@ -1,5 +1,7 @@
+import WalletContent from "../../../components/user/contents/wallter_content/WalletContent";
+
 const Wallet = () => {
-  return <div>Wallet</div>;
+  return <WalletContent />;
 };
 
 export default Wallet;
