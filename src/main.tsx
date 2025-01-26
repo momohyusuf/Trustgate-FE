@@ -10,6 +10,7 @@ createRoot(document.getElementById("root")!).render(
       theme={{
         token: {
           colorPrimary: "#787AD6",
+          fontFamily: "Inter",
         },
       }}
     >

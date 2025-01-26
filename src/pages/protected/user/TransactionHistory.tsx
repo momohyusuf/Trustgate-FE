@@ -1,5 +1,7 @@
+import TransactionHistoryContent from "../../../components/user/contents/transaction_history_content/TransactionHistoryContent";
+
 const TransactionHistory = () => {
-  return <div>TransactionHistory</div>;
+  return <TransactionHistoryContent />;
 };
 
 export default TransactionHistory;

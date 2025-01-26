@@ -4,17 +4,21 @@ import { CircleAlert, CircleCheckBig, ChevronDown, Check } from "lucide-react";
 interface FormInputFieldProps {
   placeholder?: string;
   value?: string;
-  name: string;
+  name?: string;
   error?: boolean;
   errorName?: string;
   message?: string;
   icon?: React.ReactNode;
   inputValid?: boolean;
   options: string[];
+  size?: "small" | "medium" | "large";
+  variant?: "primary" | "secondary";
   handleInputChange: (value: string) => void;
 }
 
 const SelectInputField = ({
+  size = "large",
+  variant = "primary",
   placeholder,
   value,
   name,
@@ -45,17 +49,27 @@ const SelectInputField = ({
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-full font-inter bg-white p-3 border rounded-md flex items-center justify-between
+          className={`w-full font-inter ${
+            variant === "primary" ? "bg-primary-200" : "bg-white"
+          } ${
+            size === "small" ? "p-2" : size === "medium" ? "p-3" : "p-4"
+          } border rounded-md flex items-center justify-between
             ${
               error && errorName === name
                 ? "border-red-500 text-red-500"
                 : "border-gray-300"
             } focus:outline-none transition-all duration-300`}
         >
-          <span className={selectedOption ? "text-black" : "text-gray-500"}>
+          <span
+            className={
+              selectedOption
+                ? `${variant === "secondary" ? "text-black" : "text-gray-600"}`
+                : "text-gray-600"
+            }
+          >
             {selectedOption || `${placeholder}`}
           </span>
-          <ChevronDown className="w-5 h-5 text-gray-500" />
+          <ChevronDown className={`ml-2 w-5 h-5 text-grey-600`} />
         </button>
 
         {isOpen && (

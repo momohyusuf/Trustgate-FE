@@ -1,5 +1,7 @@
+import NotificationContent from "../../../components/user/contents/notification_content/NotificationContent";
+
 const Notifications = () => {
-  return <div>Notifications</div>;
+  return <NotificationContent />;
 };
 
 export default Notifications;

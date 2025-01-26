@@ -19,11 +19,13 @@ const BuyVirtualNumberContent = () => {
           name="Phone Number Service"
           placeholder="Search or select a service"
           options={["Whatsapp", "Twitter"]}
+          variant="secondary"
           handleInputChange={(value) => console.log(value)}
         />
         <SelectInputField
           placeholder="Search or select a country"
           name="Country"
+          variant="secondary"
           options={["Nigeria", "Ghana"]}
           handleInputChange={(value) => console.log(value)}
         />
