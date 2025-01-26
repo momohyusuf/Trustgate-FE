@@ -25,7 +25,7 @@ const UserDashBoardLayout = () => {
       </div>
       <div className=" w-full lg:w-[75%] h-full">
         <UserNavbar setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
-        <div className="p-8">
+        <div className="p-8 lg:p-16">
           <Outlet />
         </div>
       </div>
