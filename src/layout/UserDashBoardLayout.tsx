@@ -31,12 +31,12 @@ const UserDashBoardLayout = () => {
         />
 
         <img
-          className="absolute -bottom-[5rem] right-[1rem] lg:right-[15rem]  -z-2 rotate-90"
+          className="absolute -bottom-[5rem] hidden lg:block right-[15rem]  -z-2 rotate-90"
           src="/ellipse-rounded.svg"
           alt="Trust Gate logo"
         />
         <UserNavbar setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
-        <div className="p-8 lg:p-16 relative z-10 ">
+        <div className="p-8 lg:p-16 relative z-10">
           <Outlet />
         </div>
       </div>
