@@ -9,7 +9,7 @@ const HelpAndTutorialContent = () => {
   return (
     <section>
       <h1 className="text-xl lg:text-3xl text-grey-600 font-lora font-semibold mb-8">
-        Notifications
+        Help and Tutorials
       </h1>
       <div className="grid md:grid-cols-2 gap-8 max-w-[690px]">
         {[
