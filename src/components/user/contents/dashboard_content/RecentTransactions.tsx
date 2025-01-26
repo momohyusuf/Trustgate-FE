@@ -1,12 +1,12 @@
 import moment from "moment";
 import { Link } from "react-router";
-const RecentTransactions = () => {
+const RecentTransactions = ({ tableHeading }: { tableHeading: string[] }) => {
   return (
     <div className="w-full overflow-x-auto rounded-lg ">
       <table className="w-full text-left min-w-[600px]">
         <thead>
           <tr className="text-grey-600  text-lg font-medium bg-primary-100">
-            {["Type", "Amount", "Status", "Date", ""].map((item) => (
+            {[...tableHeading, ""].map((item) => (
               <th key={item} className="font-medium p-4 text-left">
                 {item}
               </th>

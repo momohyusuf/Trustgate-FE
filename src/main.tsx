@@ -1,10 +1,19 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
+import { ConfigProvider } from "antd";
 import "./index.css";
 import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    <App />
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: "#787AD6",
+        },
+      }}
+    >
+      <App />
+    </ConfigProvider>
   </BrowserRouter>
 );

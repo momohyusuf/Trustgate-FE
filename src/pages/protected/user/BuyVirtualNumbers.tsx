@@ -1,5 +1,7 @@
+import BuyVirtualNumberContent from "../../../components/user/contents/buy_virtual_number_content/BuyVirtualNumberContent";
+
 const BuyVirtualNumbers = () => {
-  return <div>BuyVirtualNumbers</div>;
+  return <BuyVirtualNumberContent />;
 };
 
 export default BuyVirtualNumbers;

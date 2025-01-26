@@ -30,7 +30,7 @@ const DashboardContent = () => {
                 </div>
                 <CreditCard size={24} color="black" strokeWidth={2} />
               </div>
-              <CustomButton
+              {/* <CustomButton
                 text={
                   <p className="flex items-center justify-center p-2 lg:gap-4">
                     <Plus /> <span>Top up your account</span>
@@ -41,6 +41,18 @@ const DashboardContent = () => {
                 onClick={() => {
                   setShowAddFunds(true);
                 }} // Add onClick function
+              /> */}
+              <CustomButton
+                text={
+                  <p className="flex items-center justify-center gap-2 lg:gap-4">
+                    <Plus /> <span>Top up your account</span>
+                  </p>
+                }
+                variant="primary"
+                className="w-full mt-4"
+                onClick={() => {
+                  setShowAddFunds(true);
+                }}
               />
             </div>
             <div className="bg-white p-4 lg:p-8 rounded-lg text-grey-600">
@@ -51,6 +63,7 @@ const DashboardContent = () => {
                 </div>
                 <Users size={24} strokeWidth={2} />
               </div>
+
               <CustomButton
                 text={
                   <p className="flex items-center justify-center gap-2 lg:gap-4">
@@ -61,7 +74,7 @@ const DashboardContent = () => {
                 className="w-full mt-4"
                 onClick={() => {
                   navigate("/dashboard/buy-virtual-numbers");
-                }} // Add onClick function
+                }}
               />
             </div>
           </div>
@@ -69,7 +82,9 @@ const DashboardContent = () => {
             <h1 className="text-xl lg:text-3xl text-grey-600 font-lora font-semibold mb-8">
               Recent Transactions
             </h1>
-            <RecentTransactions />
+            <RecentTransactions
+              tableHeading={["Type", "Amount", "Status", "Date"]}
+            />
           </div>
         </>
       )}

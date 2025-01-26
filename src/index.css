@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* option {
+  padding: 5rem !important;
+} */
+/* .ant-select-selection-item {
+  padding: 3rem;
+} */
