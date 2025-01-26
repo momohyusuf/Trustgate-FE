@@ -1,13 +1,15 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Navbar from "../components/ui/navbar/Navbar";
 import Footer from "../components/ui/footer/Footer";
 
 const MainLayout = () => {
+  const location = useLocation();
   return (
     <>
-      <Navbar />
+      {location.pathname.includes("dashboard") ? null : <Navbar />}
       <Outlet />
-      <Footer />
+
+      {location.pathname.includes("dashboard") ? null : <Footer />}
     </>
   );
 };

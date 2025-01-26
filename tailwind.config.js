@@ -7,10 +7,12 @@ export default {
         primary: {
           100: "#F0F0FAB2",
           200: "#A2A3E4",
-
           400: "#787AD6",
         },
 
+        tertiary: {
+          100: "#DDDEF5",
+        },
         secondary: {
           100: "#E6E6F7",
         },

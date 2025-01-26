@@ -11,6 +11,15 @@ import UserLogin from "../pages/auth/Login";
 import UserResetPassword from "../pages/auth/ResetPassword";
 import UserForgotPassword from "../pages/auth/ForgotPassword";
 
+// User protected pages
+import BuyVirtualNumbers from "../pages/protected/user/BuyVirtualNumbers";
+import ActiveNumbers from "../pages/protected/user/ActiveNumbers";
+import HelpAndTutorials from "../pages/protected/user/HelpAndTutorials";
+import Notifications from "../pages/protected/user/Notifications";
+import TransactionHistory from "../pages/protected/user/TransactionHistory";
+import Wallet from "../pages/protected/user/Wallet";
+import AccountSettings from "../pages/protected/user/AccountSettings";
+
 interface Page {
   general: {
     path: string;
@@ -43,22 +52,56 @@ export const publicPages: Page = {
 export const authPages: Page = {
   general: [
     {
-      path: "/auth/register",
+      path: "/register",
       component: UserRegistration,
     },
 
     {
-      path: "/auth/login",
+      path: "/login",
       component: UserLogin,
     },
     {
-      path: "/auth/forgot-password",
+      path: "/forgot-password",
       component: UserForgotPassword,
     },
 
     {
-      path: "/auth/reset-password",
+      path: "/reset-password",
       component: UserResetPassword,
+    },
+  ],
+};
+
+export const protectedPages: Page = {
+  general: [
+    {
+      path: "buy-virtual-numbers",
+      component: BuyVirtualNumbers,
+    },
+    {
+      path: "active-numbers",
+      component: ActiveNumbers,
+    },
+    {
+      path: "wallet",
+      component: Wallet,
+    },
+    {
+      path: "transaction-history",
+      component: TransactionHistory,
+    },
+    {
+      path: "notifications",
+      component: Notifications,
+    },
+
+    {
+      path: "help-and-tutorials",
+      component: HelpAndTutorials,
+    },
+    {
+      path: "account-settings",
+      component: AccountSettings,
     },
   ],
 };
