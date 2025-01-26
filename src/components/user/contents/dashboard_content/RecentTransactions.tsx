@@ -2,7 +2,7 @@ import moment from "moment";
 import { Link } from "react-router";
 const RecentTransactions = ({ tableHeading }: { tableHeading: string[] }) => {
   return (
-    <div className="w-full overflow-x-auto rounded-lg ">
+    <div className="w-full overflow-scroll overflow-x lg:overflow-x-auto rounded-lg ">
       <table className="w-full text-left min-w-[600px]">
         <thead>
           <tr className="text-grey-600  text-lg font-medium bg-primary-100">
