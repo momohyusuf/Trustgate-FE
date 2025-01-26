@@ -19,7 +19,7 @@ const MobileSidebar = ({
       className={`flex flex-col  h-screen p-8 lg:p-16 bg-primary-100 relative transition-all duration-300`}
     >
       <img
-        className="absolute bottom-[5rem]  -left-[10rem]  z-10 rotate-180"
+        className="absolute bottom-[5rem]  -left-[10rem]  -z-5 rotate-180"
         src="/ellipse-rounded.svg"
         alt="Trust Gate logo"
       />
@@ -49,7 +49,7 @@ const MobileSidebar = ({
         ))}
       </nav>
 
-      <div className="flex justify-between p-4">
+      <div className="flex justify-between p-4 relative z-20 pb-8">
         <p
           onClick={() => {
             setShowSidebar(false);

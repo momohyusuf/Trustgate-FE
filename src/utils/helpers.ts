@@ -1,6 +1,6 @@
 export class ValidateInput {
   static validateInput(input: string): boolean {
-    return input.length > 0;
+    return input.trim().length > 0;
   }
   static validateEmail(email: string): boolean {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

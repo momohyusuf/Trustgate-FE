@@ -17,7 +17,7 @@ const DesktopSidebar = () => {
       />
 
       <img
-        className="absolute -bottom-[3rem] hidden lg:block -left-[2rem]  z-10 rotate-90"
+        className="absolute -bottom-[3rem] hidden lg:block -left-[2rem]  -z-5 rotate-90"
         src="/ellipse-rounded.svg"
         alt="Trust Gate logo"
       />
@@ -37,8 +37,8 @@ const DesktopSidebar = () => {
         ))}
       </nav>
 
-      <div className="flex justify-between p-4">
-        <Link className="flex gap-4" to="/user/account-settings">
+      <div className="flex justify-between p-4 relative z-10">
+        <Link className="flex gap-4" to="/dashboard/account-settings">
           <Settings strokeWidth={2.5} />
           <span>Account Settings</span>
         </Link>

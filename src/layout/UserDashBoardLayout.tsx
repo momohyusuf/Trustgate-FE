@@ -20,7 +20,7 @@ const UserDashBoardLayout = () => {
           />
         </div>
       )}
-      <div className="hidden lg:block w-[25%] h-screen bg-white">
+      <div className="hidden sticky top-0 lg:block w-[25%] min-h-screen bg-white">
         <DesktopSidebar />
       </div>
       <div className=" w-full lg:w-[75%] h-full">
