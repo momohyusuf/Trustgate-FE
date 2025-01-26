@@ -12,7 +12,7 @@ const UserDashBoardLayout = () => {
     <section className="flex">
       {showSidebar && (
         <div
-          className={`fixed top-0 left-0 z-50 h-full transition-all duration-300 bg-[#F0F0FA] w-[96%] animate-fade  animate-delay-200 md:hidden`}
+          className={`fixed top-0 left-0 z-50 h-full transition-all duration-300 bg-[#F0F0FA] w-[96%] animate-fade  animate-delay-200 lg:hidden`}
         >
           <MobileSidebar
             setShowSidebar={setShowSidebar}
@@ -20,7 +20,7 @@ const UserDashBoardLayout = () => {
           />
         </div>
       )}
-      <div className="hidden md:block w-[25%] h-screen bg-white">
+      <div className="hidden lg:block w-[25%] h-screen bg-white">
         <DesktopSidebar />
       </div>
       <div className=" w-full lg:w-[75%] h-full">

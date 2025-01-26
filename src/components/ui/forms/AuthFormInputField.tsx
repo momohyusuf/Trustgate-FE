@@ -2,7 +2,7 @@ import React from "react";
 import { CircleAlert, CircleCheckBig } from "lucide-react";
 
 interface AuthFormInputFieldProps {
-  placeholder: string;
+  placeholder?: string;
   value?: string;
   name: string;
   error?: boolean;
@@ -13,7 +13,7 @@ interface AuthFormInputFieldProps {
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const AuthFormInputField = ({
+const FormInputField = ({
   placeholder,
   value,
   name,
@@ -55,4 +55,4 @@ const AuthFormInputField = ({
   );
 };
 
-export default AuthFormInputField;
+export default FormInputField;
