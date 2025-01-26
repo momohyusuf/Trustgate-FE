@@ -7,7 +7,7 @@ const UserNavbar = ({
   setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   return (
-    <nav className="bg-primary-100 px-12 py-4 font-inter">
+    <nav className="bg-primary-100 px-8 py-4 font-inter">
       <div className="hidden lg:flex justify-between items-center">
         <p className="text-lg italic">
           Ready for a seamless verification?{" "}

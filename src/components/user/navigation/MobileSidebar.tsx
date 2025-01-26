@@ -16,10 +16,10 @@ const MobileSidebar = ({
 
   return (
     <aside
-      className={`flex flex-col  h-screen p-16 bg-primary-100 relative transition-all duration-300`}
+      className={`flex flex-col  h-screen p-8 lg:p-16 bg-primary-100 relative transition-all duration-300`}
     >
       <img
-        className="absolute bottom-[5rem]  -left-[10rem]  z-10 rotate-90"
+        className="absolute bottom-[5rem]  -left-[10rem]  z-10 rotate-180"
         src="/ellipse-rounded.svg"
         alt="Trust Gate logo"
       />
@@ -32,7 +32,7 @@ const MobileSidebar = ({
       <nav className="flex flex-col mb-auto relative z-20">
         {userRoutes.map((route) => (
           <p
-            className={`flex items-center gap-4 border-b  hover:bg-tertiary-100 p-4 rounded-md transition-all duration-300  ${
+            className={`flex items-center text-sm lg:text-base gap-4 border-b  hover:bg-tertiary-100 p-3 lg:p-4 rounded-md transition-all duration-300  ${
               currentPath === route.to ? "bg-tertiary-100" : ""
             }`}
             key={route.id}

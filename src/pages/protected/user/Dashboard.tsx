@@ -1,5 +1,7 @@
+import DashboardContent from "../../../components/user/contents/dashboard_content/Dashboard";
+
 const Dashboard = () => {
-  return <div>Dashboad</div>;
+  return <DashboardContent />;
 };
 
 export default Dashboard;
