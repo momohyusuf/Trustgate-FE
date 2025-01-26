@@ -24,8 +24,19 @@ const UserDashBoardLayout = () => {
         <DesktopSidebar />
       </div>
       <div className=" w-full lg:w-[75%] h-full">
+        <img
+          className="absolute hidden lg:block top-0  right-[15rem] z-10"
+          src="/ellipse.svg"
+          alt="Trust Gate logo"
+        />
+
+        <img
+          className="absolute -bottom-[5rem] right-[1rem] lg:right-[15rem]  -z-2 rotate-90"
+          src="/ellipse-rounded.svg"
+          alt="Trust Gate logo"
+        />
         <UserNavbar setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
-        <div className="p-8 lg:p-16">
+        <div className="p-8 lg:p-16 relative z-10 ">
           <Outlet />
         </div>
       </div>
